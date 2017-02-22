@@ -1,0 +1,43 @@
+meta {
+    title: "Youth Mappers Validators Checks";
+    version: "1.0";
+    description: "Some easy settings to find problems that are common in HOT and Youth Mappers tasks -- namely roads that have a name, which might suspect, and buildings that aren't tagged as building=yes";
+    author: "George Washington University";
+    /* Contributors: Andrew Wiseman */
+    /* Credit: HOT & Youth Mappers */
+}
+
+
+/* Sees if highways are named */
+
+way["highway"=~/^(secondary|tertiary|unclassified|residential|track|road|path|living_street)$/][name] {
+  casing-color: green;
+  casing-width: 3;
+  
+}
+
+/* Sees if highways are named for themselves */
+
+way[highway]["name"=~/^(secondary|tertiary|unclassified|residential|track|road|path|living_street)$/] {
+  casing-color: red;
+  casing-width: 3;
+  
+}
+
+/* Checks if buildings aren't building=yes */
+
+way[building][!building?] {
+  casing-color: orange;
+  casing-width: 3;
+  
+}
+
+/* Checks if buildings have a name */
+
+way[building][name] {
+  casing-color: yellow;
+  casing-width: 3;
+  
+}
+
+
