@@ -1,10 +1,19 @@
 meta {
-    title: "Youth Mappers Validators Checks";
-    version: "1.0";
-    description: "Some easy settings to find problems that are common in HOT and Youth Mappers tasks -- namely roads that have a name, which might suspect, and buildings that aren't tagged as building=yes";
+    title: "Missing Maps / Youth Mappers Validators Checks";
+    version: "1.6";
+    description: "Some easy settings to find problems that are common in HOT and Missing Maps tasks -- namely roads that have a name, which might suspect, and buildings that aren't tagged as building=yes";
     author: "George Washington University";
     /* Contributors: Andrew Wiseman */
-    /* Credit: HOT & Youth Mappers */
+    /* Credit: HOT & Missing Maps & Youth Mappers */
+    /* based partially on "HOT-Validate" by "MarkCupitt" */
+}
+
+
+/* makes tracks show up better */
+
+way[highway=track]
+{
+    color: olive;	
 }
 
 
@@ -24,20 +33,57 @@ way[highway]["name"=~/^(secondary|tertiary|unclassified|residential|track|road|p
   
 }
 
-/* Checks if buildings aren't building=yes */
+/* Checks if buildings aren't tagged building=yes */
 
 way[building][!building?] {
+  fill-color: orange;
   casing-color: orange;
-  casing-width: 3;
+  casing-width: 4;
   
 }
 
 /* Checks if buildings have a name */
 
 way[building][name] {
+  fill-color: yellow;
   casing-color: yellow;
   casing-width: 3;
   
 }
 
+/* Flag any Intersects between ways and natural areas */
 
+area[natural]:closed > node:connection
+{
+	color: red;
+    fill-color: red;
+    fill-opacity: 0.7;
+	symbol-shape: triangle;
+	symbol-size: 30;
+
+	symbol-fill-color: Red;
+	symbol-fill-opacity: 0.6;
+
+	symbol-stroke-color: red;
+	symbol-stroke-opacity: 0.7;
+	
+}
+
+/* Flag any Intersects between ways and buildings */
+
+
+area[building]:closed > node:connection
+{
+	color: red;
+    fill-color: red;
+    fill-opacity: 0.7;
+	symbol-shape: triangle;
+	symbol-size: 25;
+
+	symbol-fill-color: Red;
+	symbol-fill-opacity: 0.6;
+
+	symbol-stroke-color: red;
+	symbol-stroke-opacity: 0.7;
+	
+}
