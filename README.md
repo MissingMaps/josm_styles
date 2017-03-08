@@ -20,9 +20,9 @@ Click the plus sign at upper right to add a new one.
 
 ![](https://i.imgur.com/fw04Miq.png)
 
-Type a name and a URL and the paint style will appear in your Map Paint Styles window. 
+Type a name like Missing Maps Validation or whatever you'd like, and put https://github.com/MissingMaps/josm_styles/archive/master.zip in the URL field, and the paint style will appear in your Map Paint Styles window. 
 
-There are four colors you may see, corresponding to the errors mentioned earlier: 
+There are four colors you may see from this paint style, corresponding to the errors mentioned earlier: 
  - buildings with names are yellow
  - buildings not tagged ``building=yes`` are orange
  - roads that are named are green
