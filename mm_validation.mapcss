@@ -1,7 +1,7 @@
 meta {
     title: "Missing Maps / Youth Mappers Validators Checks";
     version: "1.7";
-    description: "Some easy settings to find problems that are common in HOT and Youth Mappers tasks -- namely roads that have a name, which might suspect, and buildings that aren't tagged as building=yes";
+    description: "Some easy settings to find problems that are common in HOT, Missing Maps and Youth Mappers tasks -- namely roads that have a name, which might suspect, and buildings that aren't tagged as building=yes";
     author: "George Washington University";
     /* Contributors: Andrew Wiseman */
     /* Credit: HOT & Missing Maps & Youth Mappers */
