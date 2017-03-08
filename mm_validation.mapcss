@@ -64,29 +64,13 @@ area[natural]:closed > node:connection
 	symbol-fill-color: orange;
 	symbol-fill-opacity: 0.6;
 
-	symbol-stroke-color: orange;
+	symbol-stroke-color: black;
 	symbol-stroke-opacity: 0.7;
 	
 }
 
 /* Flag any Intersects between ways and buildings */
 
-
-area[building]:closed > node:connection
-{
-	color: red;
-    fill-color: red;
-    fill-opacity: 0.7;
-	symbol-shape: triangle;
-	symbol-size: 25;
-
-	symbol-fill-color: orange;
-	symbol-fill-opacity: 0.6;
-
-	symbol-stroke-color: orange;
-	symbol-stroke-opacity: 0.7;
-	
-}
 
 way[highway] > node:connection
 {
