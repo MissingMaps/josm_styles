@@ -34,5 +34,5 @@ There are four colors you may see from this paint style, corresponding to the er
 
 This paint style lets you got through and find these issues quickly and see if they should be fixed or not.
 
-![](https://i.imgur.com/xLqP5Ah.png =400x)
+<img src="https://i.imgur.com/xLqP5Ah.png" width="400">
 <img src="http://i.imgur.com/7OHaoOj.png" width="400">
