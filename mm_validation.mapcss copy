@@ -1,0 +1,130 @@
+meta {
+    title: "Missing Maps / Youth Mappers Validators Checks";
+    version: "1.6";
+    description: "Some easy settings to find problems that are common in HOT and Youth Mappers tasks -- namely roads that have a name, which might suspect, and buildings that aren't tagged as building=yes";
+    author: "George Washington University";
+    /* Contributors: Andrew Wiseman */
+    /* Credit: HOT & Missing Maps & Youth Mappers */
+    /* based partially on "HOT-Validate" by "MarkCupitt" */
+}
+
+
+/* makes tracks show up better */
+
+way[highway=track]
+{
+    color: olive;	
+}
+
+
+/* Sees if highways are named */
+
+way["highway"=~/^(secondary|tertiary|unclassified|residential|track|road|path|living_street)$/][name] {
+  casing-color: green;
+  casing-width: 3;
+  
+}
+
+/* Sees if highways are named for themselves */
+
+way[highway]["name"=~/^(secondary|tertiary|unclassified|residential|track|road|path|living_street)$/] {
+  casing-color: red;
+  casing-width: 3;
+  
+}
+
+/* Checks if buildings aren't tagged building=yes */
+
+way[building][!building?] {
+  fill-color: orange;
+  casing-color: orange;
+  casing-width: 4;
+  
+}
+
+/* Checks if buildings have a name */
+
+way[building][name] {
+  fill-color: yellow;
+  casing-color: yellow;
+  casing-width: 3;
+  
+}
+
+/* Flag any Intersects between ways and natural areas */
+
+area[natural]:closed > node:connection
+{
+	color: red;
+    fill-color: red;
+    fill-opacity: 0.7;
+	symbol-shape: triangle;
+	symbol-size: 30;
+
+	symbol-fill-color: orange;
+	symbol-fill-opacity: 0.6;
+
+	symbol-stroke-color: orange;
+	symbol-stroke-opacity: 0.7;
+	
+}
+
+/* Flag any Intersects between ways and buildings */
+
+
+area[building]:closed > node:connection
+{
+	color: red;
+    fill-color: red;
+    fill-opacity: 0.7;
+	symbol-shape: triangle;
+	symbol-size: 25;
+
+	symbol-fill-color: orange;
+	symbol-fill-opacity: 0.6;
+
+	symbol-stroke-color: orange;
+	symbol-stroke-opacity: 0.7;
+	
+}
+
+way[highway] > node:connection
+{
+	set .way5;
+	
+}
+
+way[building]:closed > node:connection!.way5
+{
+	color: orange;
+    fill-color: orange;
+    fill-opacity: 0.7;
+	symbol-shape: triangle;
+	symbol-size: 25;
+
+	symbol-fill-color: orange;
+	symbol-fill-opacity: 0.6;
+
+	symbol-stroke-color: black;
+	symbol-stroke-opacity: 0.7;
+	
+}
+
+
+way[building]:closed > node:connection.way5
+{
+	
+    color: red;
+    fill-color: red;
+    fill-opacity: 0.7;
+	symbol-shape: triangle;
+	symbol-size: 25;
+
+	symbol-fill-color: red;
+	symbol-fill-opacity: 0.6;
+
+	symbol-stroke-color: black;
+	symbol-stroke-opacity: 0.7; 
+	
+}
+
