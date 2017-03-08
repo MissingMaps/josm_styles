@@ -14,13 +14,13 @@ Like the validation warnings, the paint style doesn’t necessarily show what is
 
 To add the paint style, click on the Windows menu and go to Map Paint Styles… which will open a menu on JOSM:
 
-![](https://i.imgur.com/EuOOoiE.png)
+![](https://i.imgur.com/EuOOoiE.png =400x)
 
 Then click the paint style settings button at lower right.
 
 Click the plus sign at upper right to add a new one. 
 
-![](https://i.imgur.com/fw04Miq.png)
+![](https://i.imgur.com/fw04Miq.png =400x)
 
 Type a name like Missing Maps Validation or whatever you'd like, and put https://github.com/MissingMaps/josm_styles/archive/master.zip in the URL field, and the paint style will appear in your Map Paint Styles window. 
 
@@ -34,5 +34,5 @@ There are four colors you may see from this paint style, corresponding to the er
 
 This paint style lets you got through and find these issues quickly and see if they should be fixed or not.
 
-![](https://i.imgur.com/xLqP5Ah.png)
-![](http://i.imgur.com/7OHaoOj.png)
+![](https://i.imgur.com/xLqP5Ah.png =400x)
+![](http://i.imgur.com/7OHaoOj.png =400x)
