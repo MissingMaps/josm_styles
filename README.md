@@ -7,6 +7,8 @@ There’s a paint style you can add to JOSM to help you find a few errors that a
  - buildings not tagged ``building=yes``
  - roads that are named
  - roads that are named for a description (like ``highway=residential``, ``name=residential``) 
+ - buildings that are connected to roads or other features
+
 
 Like the validation warnings, the paint style doesn’t necessarily show what is wrong, but it shows what you’ll need to look at to see if it’s wrong.
 
@@ -27,7 +29,10 @@ There are four colors you may see from this paint style, corresponding to the er
  - buildings not tagged ``building=yes`` are orange
  - roads that are named are green
  - roads that are named for a description (like ``highway=residential``, ``name=residential``) are red.
+ - buildings that are connected to roads or other features are red triangles
+ - buildings that are connected to other buildings are orange triangles
 
 This paint style lets you got through and find these issues quickly and see if they should be fixed or not.
 
-![](https://i.imgur.com/xLqP5Ah.png)
+<img src="https://i.imgur.com/xLqP5Ah.png" width="600">
+<img src="http://i.imgur.com/7OHaoOj.png" width="400">
